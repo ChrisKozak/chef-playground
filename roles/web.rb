@@ -1,6 +1,6 @@
 name 'web'
 description 'Web Role'
-run_list 'recipe[java]'
+run_list ['recipe[java]', 'recipe[tomcat]']
 default_attributes({
 	:java => {
 		:install_flavor => "oracle",
